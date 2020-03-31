@@ -24,12 +24,22 @@ import (
 	pb "github.com/hyperledger/fabric-protos-go/peer"
 )
 
+// #cgo CFLAGS: -I${SRCDIR}/ -I/opt/intel/sgxsdk/include/
+// #cgo LDFLAGS: ${SRCDIR}/libapp.a /opt/intel/sgxsdk/lib64/libsgx_urts.so
+// #include<./sgx/App/App.h>
+import "C"
+
+
 // ABstore Chaincode implementation
 type ABstore struct {
 }
 
 func (t *ABstore) Init(stub shim.ChaincodeStubInterface) pb.Response {
 	fmt.Println("ABstore Init")
+
+	double := C.ff()
+        fmt.Printf("%d \n",  double)
+
 	_, args := stub.GetFunctionAndParameters()
 	var A, B string    // Entities
 	var Aval, Bval int // Asset holdings
