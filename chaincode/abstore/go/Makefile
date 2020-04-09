@@ -7,4 +7,4 @@ main:
 .PHONY: clean
 clean:
 	$(MAKE) -C sgx clean
-	rm -rf enclave.signed.so libapp.a main go-sgx libapp.so
+	rm -rf enclave.signed.so libapp.a main go-sgx libapp.so go
