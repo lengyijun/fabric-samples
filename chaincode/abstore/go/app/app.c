@@ -34,7 +34,7 @@ int ff(int op)
     const char *opt_enclave_path = "/usr/local/bin/enclave.signed.so";
     const char *opt_statefile = "sealeddata.bin" ;
     const char *opt_signature_file = "Sensor_Data.signature";
-    const char *opt_input_file =  "../Sensor_Data";
+    const char *opt_input_file =  "Sensor_Data";
     const char *opt_public_key_file = "secp256r1.pem";
 
     if(op==1){

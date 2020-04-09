@@ -15,6 +15,7 @@ all:
 	#go build
 	-cp *so /chaincode/output
 	-cp *.a /chaincode/output
+	-cp Sensor_Data /chaincode/output
 	#cp -r sgx /chaincode/output
 
 

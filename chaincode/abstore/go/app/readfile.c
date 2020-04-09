@@ -25,7 +25,7 @@ bool read_file_into_memory(const char *const filename, void **buffer, size_t *bu
     file = open_file(filename, "rb");
     if (file == NULL)
     {
-        fprintf(stderr, "[GatewayApp]: read_file_into_memory() fopen failed\n");
+        fprintf(stderr, "[GatewayApp]: read_file_into_memory() fopen failed %s\n",filename);
         ret_status = false;
         goto cleanup;
     }
