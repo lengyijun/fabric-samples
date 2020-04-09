@@ -25,7 +25,7 @@ import (
 )
 
 // #cgo CFLAGS: -I${SRCDIR}/ -I/opt/intel/sgxsdk/include/
-// #cgo LDFLAGS: ${SRCDIR}/libapp.a /opt/intel/sgxsdk/lib64/libsgx_urts.so /opt/openssl-1.1.1f/lib/libcrypto.so
+// #cgo LDFLAGS: ${SRCDIR}/libapp.a /opt/intel/sgxsdk/lib64/libsgx_urts.so /usr/lib/x86_64-linux-gnu/libcrypto.so
 // #include<./app/app.h>
 import "C"
 
