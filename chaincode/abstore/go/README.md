@@ -1,0 +1,5 @@
+```
+make
+./sgx-sample
+```
+
